@@ -3,9 +3,9 @@
   "family": "session.tab-close",
   "namedDeltas": [],
   "runnerVersion": 1,
-  "baseline": "e7206f62a827f4fe0a2badf3eecd2167b8ac4285",
-  "lockfileSha256": "788c1234b38a61fc882fca292341fce6690deee9cc6695673b0575cf2c4cf571",
-  "recorderSha256": "64a741e034b13bca69c466f93f713aa5c0cf3fbb2bbb02f357003506b17fe353",
+  "baseline": "02a55944347346065453e179e071e64d9ae861dc",
+  "lockfileSha256": "9317f3a98ab047f9f96fe26fd8531b8a632ac5954064b322f41a904148cbf6bb",
+  "recorderSha256": "0317fe2aebe4743ce5e7ae194531aa91b4fe0a84df457640851fe6dfdb9362af",
   "adapterSha256": "562c2f4ab669e774dd7045ecd9518e483845433fef6034688090f3b056df2815",
   "scenarioSha256": "1b3da0207aef65f4b2348aed334284259170c640e767fb354b9e95f3c1369445",
   "platform": "darwin",
@@ -13,10 +13,6 @@
   "projectionVersion": 2,
   "goldenFormatVersion": 5,
   "values": {
-    "2d697fe0c9bf": {
-      "name": "terminal.close#1",
-      "json": "{\"id\":\"frame-1\",\"deviceToken\":\"recording-device\",\"method\":\"terminal.close\",\"params\":{\"terminal\":\"terminal-1\"}}"
-    },
     "3e15def58214": {
       "activeHandle": "terminal-1",
       "sessionTabs": [
@@ -36,8 +32,9 @@
         }
       ]
     },
-    "ca6a54b1b350": {
+    "744d30b1a0ad": {
       "name": "terminal.close#1",
+      "ordinal": 1,
       "args": [
         {
           "name": "method",
@@ -77,6 +74,11 @@
       "value": {
         "$rpc": "undefined"
       }
+    },
+    "ff9e6fa68d38": {
+      "name": "terminal.close#1",
+      "ordinal": 2,
+      "json": "{\"id\":\"frame-1\",\"deviceToken\":\"recording-device\",\"method\":\"terminal.close\",\"params\":{\"terminal\":\"terminal-1\"}}"
     }
   },
   "recording": {
@@ -85,8 +87,8 @@
       {
         "id": "kept",
         "observation": {
-          "sender": ["ca6a54b1b350"],
-          "payloads": ["2d697fe0c9bf"],
+          "sender": ["744d30b1a0ad"],
+          "payloads": ["ff9e6fa68d38"],
           "settlements": {
             "close-terminal": "eb79a9b3682a"
           },

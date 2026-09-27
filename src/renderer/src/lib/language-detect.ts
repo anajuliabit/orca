@@ -42,6 +42,7 @@ const EXT_TO_LANGUAGE: Record<string, string> = {
   // Why: Monaco declares Liquid as both '.liquid' and '.html.liquid'; the final-extension
   // lookup below covers the compound form, so the single entry is enough.
   '.liquid': 'liquid',
+  '.twig': 'twig',
   '.xml': 'xml',
   '.svg': 'xml',
   '.py': 'python',
@@ -57,6 +58,10 @@ const EXT_TO_LANGUAGE: Record<string, string> = {
   '.cxx': 'cpp',
   '.hpp': 'cpp',
   '.cs': 'csharp',
+  // Why: Monaco's apex grammar claims only '.cls'; triggers and anonymous-Apex scripts share it.
+  '.cls': 'apex',
+  '.trigger': 'apex',
+  '.apex': 'apex',
   '.rb': 'ruby',
   '.php': 'php',
   '.swift': 'swift',
@@ -100,8 +105,10 @@ const EXT_TO_LANGUAGE: Record<string, string> = {
   '.nim': 'nim',
   '.nims': 'nim',
   '.nimble': 'nim',
+  '.typ': 'typst',
   '.tf': 'hcl',
   '.hcl': 'hcl',
+  '.abap': 'abap',
   '.prisma': 'graphql',
   '.csv': 'csv',
   '.tsv': 'tsv'
@@ -130,5 +137,10 @@ export function detectLanguage(filePath: string): string {
 
   // Check extension
   const ext = extname(filename).toLowerCase()
-  return EXT_TO_LANGUAGE[ext] ?? 'plaintext'
+  const lowerName = filename.toLowerCase()
+  // Scoped dotenv names fall back to INI only when no specific extension matches.
+  return (
+    EXT_TO_LANGUAGE[ext] ??
+    (lowerName === '.env' || lowerName.startsWith('.env.') ? 'ini' : 'plaintext')
+  )
 }

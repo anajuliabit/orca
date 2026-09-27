@@ -3,9 +3,9 @@
   "family": "worktree.retired-names",
   "namedDeltas": [],
   "runnerVersion": 1,
-  "baseline": "e7206f62a827f4fe0a2badf3eecd2167b8ac4285",
-  "lockfileSha256": "788c1234b38a61fc882fca292341fce6690deee9cc6695673b0575cf2c4cf571",
-  "recorderSha256": "64a741e034b13bca69c466f93f713aa5c0cf3fbb2bbb02f357003506b17fe353",
+  "baseline": "02a55944347346065453e179e071e64d9ae861dc",
+  "lockfileSha256": "9317f3a98ab047f9f96fe26fd8531b8a632ac5954064b322f41a904148cbf6bb",
+  "recorderSha256": "0317fe2aebe4743ce5e7ae194531aa91b4fe0a84df457640851fe6dfdb9362af",
   "adapterSha256": "4e942ddfbaa0ba6bfc2993969276987f6528ac53765d125e99a830e261f93a8e",
   "scenarioSha256": "2faa07ee5f12b3ed584117359d3b7aeb9c78a04e8fc49e753372f8c3927a3740",
   "platform": "darwin",
@@ -13,8 +13,14 @@
   "projectionVersion": 2,
   "goldenFormatVersion": 5,
   "values": {
-    "569633c0c5c5": {
+    "3a6762b141aa": {
       "name": "worktree.listRetiredNames#1",
+      "ordinal": 2,
+      "json": "{\"id\":\"frame-1\",\"deviceToken\":\"recording-device\",\"method\":\"worktree.listRetiredNames\",\"params\":{\"repo\":\"id:repo-1\"}}"
+    },
+    "840eaac5b440": {
+      "name": "worktree.listRetiredNames#1",
+      "ordinal": 1,
       "args": [
         {
           "name": "method",
@@ -38,8 +44,15 @@
         "startedAt": 0
       }
     },
-    "5e2e60e145d8": {
+    "85d826c606ff": {
+      "registry": {
+        "exhaustedTiers": 2,
+        "names": ["marlin", "orca"]
+      }
+    },
+    "97b3650e7890": {
       "name": "worktree.listRetiredNames#1",
+      "ordinal": 1,
       "args": [
         {
           "name": "method",
@@ -76,16 +89,6 @@
         }
       }
     },
-    "85d826c606ff": {
-      "registry": {
-        "exhaustedTiers": 2,
-        "names": ["marlin", "orca"]
-      }
-    },
-    "ba7d8283433b": {
-      "name": "worktree.listRetiredNames#1",
-      "json": "{\"id\":\"frame-1\",\"deviceToken\":\"recording-device\",\"method\":\"worktree.listRetiredNames\",\"params\":{\"repo\":\"id:repo-1\"}}"
-    },
     "cb76d0017b96": {
       "registry": {
         "exhaustedTiers": 0,
@@ -107,8 +110,8 @@
       {
         "id": "names-pending",
         "observation": {
-          "sender": ["569633c0c5c5"],
-          "payloads": ["ba7d8283433b"],
+          "sender": ["840eaac5b440"],
+          "payloads": ["3a6762b141aa"],
           "settlements": {
             "mount": "eb79a9b3682a"
           },
@@ -119,8 +122,8 @@
       {
         "id": "settled",
         "observation": {
-          "sender": ["5e2e60e145d8"],
-          "payloads": ["ba7d8283433b"],
+          "sender": ["97b3650e7890"],
+          "payloads": ["3a6762b141aa"],
           "settlements": {
             "mount": "eb79a9b3682a"
           },
